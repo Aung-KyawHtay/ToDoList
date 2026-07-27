@@ -1,0 +1,17 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+<h2>
+    Edit Tasking
+</h2>
+
+<form action="{{url_for('edit_task', id=id)}}" method="POST">
+    <div class="editButton">
+      <input type="text" name="task" value="{{task.text}}">
+      <button type="submit">
+        Update
+      </button>
+    </div>
+</form>
+{% endblock %}

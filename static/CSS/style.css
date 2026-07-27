@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 450px;
+    margin: 40px auto;
+    background: whitesmoke;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+hr {
+    margin: 20px 0;
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 15px 18px;
+    transition: 0.3s;
+    background-color: #6d66f5;
+    color: #ccc;
+}
+
+button:hover {
+    background-color: #5249f9;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+
+ul {
+    max-height: 300px;
+    margin-top: 50px;
+    overflow-y: auto;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    background: #fafafa;
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 8px;
+    align-items: center;
+}
+
+li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 1px 0;
+    border-radius: 10px;
+}
+
+.left {
+    flex: 1;
+    min-width: 0;
+}
+
+.left a {
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+.right {
+    display: flex;
+    gap: 10px;
+}
+
+.edit {
+    background: #10b981;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.edit:hover {
+    background: #059669;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.del {
+    background: #ef4444;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.del:hover {
+    background: #dc2626;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.completed .left {
+    text-decoration: line-through;
+    color: gray;
+}
+
+@media (max-width: 374px) {
+
+    .container {
+        margin: 20px 10px;
+        padding: 20px;
+    }
+    input {
+        width: 100%;
+    }
+
+    button {
+        width: 50%;
+        margin-top: 10px;
+        text-align: center;
+    }
+}
