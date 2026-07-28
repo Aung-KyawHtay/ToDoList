@@ -14,17 +14,13 @@
 <ul>
   {% for task in tasks %}
 
-  <li class="{% if task.completed %}
-        completed
-        {% endif %}">
+  <li class="{% if task.completed %} completed {% endif %}">
     <div class="left">
-      <a href="{{url_for('completed_task',id = task.id)}}">
-        {{task.text}}
-      </a>
+      <a href="{{url_for('completed_task',id = task.id)}}"> {{task.text}} </a>
     </div>
 
     <div class="right">
-      <a href="{{url_for('edit_task', id = task.id)}}" class="edit"> Edit </a>
+      <a href="{{url_for('edit_task', id = task.id)}}" class="edit"> edit </a>
 
       <a href="{{url_for('delete_task', id = task.id)}}" class="del">
         Delete
